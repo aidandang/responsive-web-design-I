@@ -67,6 +67,7 @@ h1, h2, h3, h4, h5 {
 /* -------------------- the main CSS started from here -------------------- */
 
 /* mobile first interface */
+
 body, header, .slide-container, .content-container, footer {
     display: flex;
     flex-direction: column;
@@ -143,6 +144,11 @@ body, header, .slide-container, .content-container, footer {
     width: 90%;
 }
 
+.img-content {
+    width: 100%;
+    text-align: center;
+}
+
 .first-text-content {
     border-top: 2px solid black;
 }
@@ -205,11 +211,6 @@ body, header, .slide-container, .content-container, footer {
 
     .second-text-content, .forth-text-content, .fifth-text-content {
         padding-left: 1%;
-    }
-
-    .img-content {
-        width: 100%;
-        text-align: center;
     }
 
     .third-text-content, .forth-text-content, .fifth-text-content {
