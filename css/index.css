@@ -64,23 +64,24 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 15px;
 }
 
-/* the main CSS started from here */
+/* -------------------- the main CSS started from here -------------------- */
 
-body {
-    width: 100%;
-}
-
-.header-container {
+/* mobile first interface */
+body, header, .slide-container, .content-container, footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.main-container {
     width: 100%;
 }
 
 .logo-container {
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     text-align: center;
+    width: 90%;
 }
 
 .nav-container {
@@ -93,13 +94,13 @@ body {
 .nav-link {
     padding-top: 20px;
     padding-bottom: 20px;
-    border-bottom: 2px solid lightslategray;
-    width: 90%;
+    border-bottom: 1px solid lightslategray;
     text-align: center;
+    width: 100%;
 }
 
-.nav-first-link {
-    border-top: 2px solid lightslategray;
+.first-nav-link {
+    border-top: 1px solid lightslategray;
 }
   
 .nav-container > div > a {
@@ -107,12 +108,12 @@ body {
     color: lightslategray;
 }
 
-.slide-container {
+.left-slide-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding-top: 40px;
+    padding-top: 20px;
     padding-bottom: 40px;
 }
 
@@ -129,49 +130,150 @@ body {
     border: 1px solid black;
 }
 
-.main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-.main-img {
-    text-align: center;
-    padding-top: 40px;
+.right-slide-container {
+    display: none;
 }
 
 .text-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 20px;
+    padding-bottom: 20px;
     width: 90%;
 }
 
-.h2-text {
-    padding-top: 40px;
-    width: 90%;
-}
-
-.first-h2-text {
+.first-text-content {
     border-top: 2px solid black;
 }
 
-.footer-container {
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+.fifth-text-content {
+    border-bottom: 2px solid black;
 }
 
-.paragraph-text {
-    width: 90%;
+.last-text-content {
+    align-items: center;
 }
 
 .copyright {
-    padding: 40px 0 40px 0;
+    padding: 0 0 20px 0;
     text-align: center;
+}
+
+/* tablet interface */
+
+@media(min-width: 500px) {
+
+    .nav-container {
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        justify-content: space-between;
+    }
+
+    .nav-link {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        width: auto;
+        border-bottom: none;
+    }
+
+    .first-nav-link {
+        border-top: none;
+    }
+
+    .logo-container {
+        padding-bottom: 0;
+    }
+
+    .content-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .first-text-content, .second-text-content {
+        border-top: 2px solid black;
+        width: 45%;
+    }
+
+    .first-text-content, .third-text-content, .forth-text-content {
+        padding-right: 1%;
+    }
+
+    .second-text-content, .forth-text-content, .fifth-text-content {
+        padding-left: 1%;
+    }
+
+    .img-content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .third-text-content, .forth-text-content, .fifth-text-content {
+        border-bottom: 2px solid black;
+        width: 30%;
+    }
+
+    .sixth-text-content {
+        width: 90%;
+    }
+} 
+
+/* desktop interface */
+
+@media(min-width: 800px) {
+    
+    header {
+        flex-direction: row-reverse;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .nav-container {
+        display: flex;
+        flex-direction: row;
+        width: 60%;
+        justify-content: space-between;
+    }
+
+    .nav-link {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        width: auto;
+        border-bottom: none;
+    }
+
+    .first-nav-link {
+        border-top: none;
+    }
+
+    .logo-container {
+        padding-top: 0;
+        padding-bottom: 0;
+        width: 30%;
+        text-align: right;
+    }
+
+    .slide-container {
+        flex-flow: row nowrap;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .left-slide-container {
+        justify-content: center;
+        width: 45%;
+    }
+
+    .right-slide-container {
+        display: flex;
+        width: 45%;
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
 }
 
 
