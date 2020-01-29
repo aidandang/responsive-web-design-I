@@ -75,21 +75,30 @@ body, header, .slide-container, .content-container, footer {
 }
 
 .main-container {
+    width: 90%;
+}
+
+header, .slide-container, .content-container, footer {
     width: 100%;
+}
+
+.content-container {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
 }
 
 .logo-container {
     padding-top: 30px;
     padding-bottom: 20px;
     text-align: center;
-    width: 90%;
+    width: 100%;
 }
 
 .nav-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 90%;
+    width: 100%;
 }
 
 .nav-link {
@@ -141,7 +150,7 @@ body, header, .slide-container, .content-container, footer {
     align-items: flex-start;
     padding-top: 20px;
     padding-bottom: 20px;
-    width: 90%;
+    width: 100%;
 }
 
 .img-content {
@@ -149,12 +158,9 @@ body, header, .slide-container, .content-container, footer {
     text-align: center;
 }
 
-.first-text-content {
-    border-top: 2px solid black;
-}
-
-.fifth-text-content {
-    border-bottom: 2px solid black;
+.middle-img {
+    width: 100%;
+    height: auto;
 }
 
 .last-text-content {
@@ -197,12 +203,10 @@ body, header, .slide-container, .content-container, footer {
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        width: 100%;
     }
 
     .first-text-content, .second-text-content {
-        border-top: 2px solid black;
-        width: 45%;
+        width: 50%;
     }
 
     .first-text-content, .third-text-content, .forth-text-content {
@@ -214,12 +218,11 @@ body, header, .slide-container, .content-container, footer {
     }
 
     .third-text-content, .forth-text-content, .fifth-text-content {
-        border-bottom: 2px solid black;
-        width: 30%;
+        width: 33%;
     }
 
     .sixth-text-content {
-        width: 90%;
+        width: 100%;
     }
 } 
 
@@ -230,13 +233,12 @@ body, header, .slide-container, .content-container, footer {
     header {
         flex-direction: row-reverse;
         justify-content: center;
-        width: 100%;
     }
 
     .nav-container {
         display: flex;
         flex-direction: row;
-        width: 60%;
+        width: 65%;
         justify-content: space-between;
     }
 
@@ -254,24 +256,23 @@ body, header, .slide-container, .content-container, footer {
     .logo-container {
         padding-top: 0;
         padding-bottom: 0;
-        width: 30%;
+        width: 35%;
         text-align: right;
     }
 
     .slide-container {
         flex-flow: row nowrap;
-        width: 100%;
         justify-content: center;
     }
 
     .left-slide-container {
         justify-content: center;
-        width: 45%;
+        width: 50%;
     }
 
     .right-slide-container {
         display: flex;
-        width: 45%;
+        width: 50%;
         padding-top: 20px;
         padding-bottom: 40px;
     }
